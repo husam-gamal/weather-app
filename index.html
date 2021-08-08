@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="background">
+        <div class="overlay">
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Weather</h1>
+            <div id="city"></div>
+            <div id="date"></div>
+        </div>
+    </header>
+
+    <div class="main-data">
+        <div class="container">
+
+            <div class="left-side">
+                <span id="temp"></span>
+                <span>&deg;</span>
+                <span id="unit"></span>
+            </div>
+
+            <div class="right-side">
+                <div id="Brief"></div>
+                <img id="icon" src="" alt="weather icon">
+                <div class="min-max-temp">
+                    <span id="temp_max"></span>
+                    <span>&uarr;</span>
+                    <span id="temp_min"></span>
+                    <span>&darr;</span>
+                </div>
+                <div class="feels">
+                    <span>Feels like</span>
+                    <span id="feels_like"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="other-data">
+        <div class="container">
+            
+            <div class="left side">
+                <span>Pressure</span>
+                <div id="pressure"></div>
+                <span>Humidity</span>
+                <div id="humidity"></div>
+                <span>Visibility</span>
+                <div id="visibility"></div>
+                <span>Wind speed</span>
+                <div id="wind_speed"></div>
+            </div>
+
+            <div class="right side">
+                <span>Sunrise</span>
+                <div id="sun_rise"></div>
+                <span>Sunset</span>
+                <div id="sun_set"></div>
+                <span>Day length</span>
+                <div id="day_len"></div>
+                <span>Night length</span>
+                <div id="night_len"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <span id="close_list" class="hide">X</span>
+            <ul id="coutry_list"></ul>
+            <ul id="city_list"></ul>
+            <ul id="unit_list">
+                <li data="">kelvin</li>
+                <li data="">Celsius</li>
+                <li data="">Fahrenheit</li>
+            </ul>
+            <div class="inputs">
+                <input type="text" id="coutry_input" placeholder="Coutry">
+                <input type="text" id="city_input" placeholder="City">
+                <input type="text" id="unit_input" placeholder="Unit">
+            </div>
+            <div class="btns">
+                <button id="by_city" onclick="gobtn()">GO</button>
+                <button id="by_location" onclick="locationBtn()"><i class="material-icons">place</i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

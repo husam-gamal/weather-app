@@ -1,0 +1,237 @@
+/*
+*
+*
+**/
+
+
+/**/
+/**/
+/*************************************************/
+
+
+/*Global*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: #fff;
+}
+/*Global*/
+/*************************************************/
+
+
+/*Component*/
+.container {
+    margin: auto;
+    width: 60%;
+}
+@media screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+    }
+}
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-color: #333;
+    background-image: url('background.jpg');
+    z-index: -1;
+    position: fixed;
+}
+.background .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #333333aa;
+}
+.hide {
+    display: none;
+}
+/*Component*/
+/*************************************************/
+
+
+/*header*/
+header h1 {
+    margin: 0;
+    opacity: 0.6;
+    font-weight: normal;
+    text-align: center;
+}
+#city {
+    font-size: 4em;
+    text-align: center;
+    text-transform: capitalize;
+}
+#date {
+    opacity: 0.6;
+    font-size: 1.5em;
+    text-align: center;
+}
+/*header*/
+/*************************************************/
+
+
+/*main-data*/
+.main-data {
+    margin-top: 100px;
+    margin-bottom: 100px;
+} 
+.main-data .container {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 768px) {
+    .main-data .container {
+        flex-direction: column;
+    }
+    .main-data .left-side {
+        margin: auto;
+    }
+}
+.main-data .left-side {
+    display: flex;
+}
+#temp {
+    font-size: 10em;
+}
+.main-data  .left-side span:nth-child(2) {
+    font-size: 5em;
+}
+#unit {
+    font-size: 5em;
+}
+.main-data  .right-side {
+    text-align: center;
+}
+#Brief {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.right-sid .min-max-temp {
+    margin: 5px 0;    
+}
+.right-sid .min-max-temp span:nth-child(2) {
+    margin-right: 10px;
+}
+/*main-data*/
+/*************************************************/
+
+
+/*other-data*/
+.other-data .container {
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: repeat(2,1fr);
+}
+@media screen and (max-width: 768px) {
+    .other-data .container {
+        row-gap: 30px;
+        grid-template-columns: 1fr;
+    }
+    .other-data .left {
+        margin-top: 50px;
+    }
+    .other-data .right {
+        margin-bottom: 150px;
+    }
+}
+.other-data .side {
+    padding: 15px;
+    color: #000;
+    display: grid;
+    row-gap: 5px;
+    border-radius: 5px;
+    grid-template-columns: repeat(2,1fr);
+    /*background-color: #fff;*/
+    background: rgba(255, 255, 255, 0.5);
+}
+.other-data span {
+    opacity: 0.6;
+}
+/*other-data*/
+/*************************************************/
+
+
+
+/*footer*/
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+}
+#close_list {
+    width: 30px;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #333;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+}
+footer ul {
+    height: 100%;
+    max-height: 0;
+    margin: 1px 15px;
+    padding: 0;
+    color: #000;
+    overflow: auto;
+    text-align: center;
+    list-style-type: none;
+    background-color: #fff;
+}
+footer ul li {
+    padding: 5px;
+    cursor: pointer;
+}
+footer ul li:hover {
+    color: #fff;
+    background-color: #333;
+}
+footer ul li:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+.inputs {
+    margin-bottom: 5px;
+    display: grid;
+    column-gap: 1px;
+    grid-template-columns: repeat(3, auto);
+}
+.btns {
+    display: grid;
+    column-gap: 1px;
+    grid-template-columns: repeat(2, 50px);
+    justify-content: center;
+}
+.inputs input {
+    padding: 10px;
+    text-align: center;
+}
+.btns button {
+    padding: 3px;
+    cursor: pointer;
+}
+.inputs input,
+.btns button {
+    width: 100%;
+    border: none;
+}
+.inputs input:focus,
+.btns button:focus {
+    outline: none;
+}
+#coutry_input, #by_city {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+#unit_input, #by_location {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+/*footer*/
+/*************************************************/
+
